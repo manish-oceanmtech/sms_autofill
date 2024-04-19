@@ -158,9 +158,7 @@ public class SmsAutoFillPlugin implements FlutterPlugin, ActivityAware, MethodCa
             return;
         }
 
-        HintRequest hintRequest = new HintRequest.Builder()
-                .setPhoneNumberIdentifierSupported(true)
-                .build();
+        GetPhoneNumberHintIntentRequest hintRequest = new GetPhoneNumberHintIntentRequest.Builder().build();
         GoogleApiClient mCredentialsClient = new GoogleApiClient.Builder(activity)
                 .addApi(Auth.CREDENTIALS_API)
                 .build();
